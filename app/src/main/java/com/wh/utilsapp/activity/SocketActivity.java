@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -37,12 +38,14 @@ public class SocketActivity extends AppCompatActivity {
     private BufferedReader in;
     private ExecutorService mExecutorService = null;
     private String receiveMsg;
+    private Button send;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_socket);
         mTextView = findViewById(R.id.reviceTcp);
+        send=findViewById(R.id.send);
         mExecutorService = Executors.newCachedThreadPool();
     }
 
@@ -76,7 +79,7 @@ public class SocketActivity extends AppCompatActivity {
 
         @Override
         public void run() {
-           char[] chars={0x00,0x01,0x00,0x00,0x00,0x06,0xff>>1,0x01,0x00,0x64,0x00,0x04};
+            char[] chars={0x00,0x01,0x00,0x00,0x00,0x06,0xff,0x01,0x00,0x64,0x00,0x04};
             printWriter.print(chars);
             printWriter.flush();
         }
@@ -89,6 +92,9 @@ public class SocketActivity extends AppCompatActivity {
                 Socket socket = new Socket(HOST, PORT);
                 socket.setSoTimeout(60000);
                 Log.i("success", "xxx     is connected   " + socket.isConnected());
+                if (socket.isConnected()){
+                    send.setVisibility(View.VISIBLE);
+                }
                 printWriter = new PrintWriter(new BufferedWriter(new OutputStreamWriter(
                         socket.getOutputStream(), "UTF-8")), true);
                 in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));

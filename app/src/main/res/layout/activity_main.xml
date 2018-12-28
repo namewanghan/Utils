@@ -56,12 +56,4 @@
         android:text="tcp_client"
         app:layout_constraintTop_toBottomOf="@id/show_heAndWid" />
 
-    <Button
-        android:id="@+id/ndk_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="ndkTestOnclick"
-        android:text="ndk_test"
-        app:layout_constraintTop_toBottomOf="@id/tcp_client" />
-
 </android.support.constraint.ConstraintLayout>

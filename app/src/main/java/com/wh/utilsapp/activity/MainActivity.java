@@ -17,10 +17,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView showHeAndWid;
     private ColorPicker colorPicker;
 
-    static {
-        System.loadLibrary("native-lib");
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,13 +56,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(MainActivity.this,SocketActivity.class);
         startActivity(intent);
     }
-
-    //ndk 测试
-    public void ndkTestOnclick(View view) {
-        Log.i("success","xxx  ");
-        Log.i("success","xxx        "+getStr());
-    }
-
-    public native String getStr();
-
 }
