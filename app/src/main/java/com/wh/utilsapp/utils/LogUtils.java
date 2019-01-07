@@ -10,8 +10,8 @@ public class LogUtils {
 
     public static String TAG="SUCCESS ++";
 
-    public static void showTestLog() {
-        Log.i("success", "test");
+    public static void showTestLog(String str) {
+        Log.i(TAG, str);
     }
 
     public static void showArr(String [] arr){

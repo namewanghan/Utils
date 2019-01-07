@@ -47,11 +47,19 @@
         app:layout_constraintTop_toBottomOf="@id/show_heAndWid" />
 
     <Button
+        android:id="@+id/logUtils"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="log utis "
         android:onClick="logUtils"
         app:layout_constraintBaseline_toBaselineOf="@id/tcp_client"
         app:layout_constraintLeft_toRightOf="@id/tcp_client" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="http kalle  "
+        android:onClick="httpUtils"
+        app:layout_constraintTop_toBottomOf="@id/logUtils" />
 
 </android.support.constraint.ConstraintLayout>

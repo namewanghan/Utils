@@ -55,4 +55,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(MainActivity.this,LoginUtilsUserDemoActivity.class);
         startActivity(intent);
     }
+
+    //网络请求工具
+    public void httpUtils(View view) {
+        Intent intent=new Intent(MainActivity.this,HttpUtilsActivity.class);
+        startActivity(intent);
+    }
 }
