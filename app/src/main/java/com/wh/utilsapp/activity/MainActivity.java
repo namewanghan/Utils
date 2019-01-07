@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i("SUCCESS", "XXX   ");
         showHeAndWid = findViewById(R.id.show_heAndWid);
         colorPicker=new ColorPicker(MainActivity.this, 255, 0, 0);
     }
@@ -29,12 +28,6 @@ public class MainActivity extends AppCompatActivity {
     //测试用按钮
     public void test(View view) {
         SuccessTest.SUCCESS();
-    }
-
-    //滤镜界面
-    public void filterActivity(View view) {
-        Intent intent = new Intent(MainActivity.this, ImageFilterActivity.class);
-        startActivity(intent);
     }
 
     public void widAndaHeight(View view) {
@@ -54,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
     //tcp 链接
     public void tcpClient(View view) {
         Intent intent=new Intent(MainActivity.this,SocketActivity.class);
+        startActivity(intent);
+    }
+
+    //日志工具
+    public void logUtils(View view) {
+        Intent intent=new Intent(MainActivity.this,LoginUtilsUserDemoActivity.class);
         startActivity(intent);
     }
 }

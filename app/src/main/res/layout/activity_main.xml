@@ -14,21 +14,20 @@
         android:text="Hello World!" />
 
     <Button
-        android:id="@+id/filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:onClick="filterActivity"
-        android:text="filter"
+        android:onClick="colorpick"
+        android:text="colorpick"
+        app:layout_constraintBaseline_toBaselineOf="@id/test"
         app:layout_constraintLeft_toRightOf="@id/test" />
-
 
     <Button
         android:id="@+id/getWidAndHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="widAndaHeight"
-        android:text="获取宽高"
+        android:text="get screen  width + height "
         app:layout_constraintTop_toBottomOf="@id/test" />
 
     <TextView
@@ -40,20 +39,19 @@
         app:layout_constraintTop_toBottomOf="@id/getWidAndHeight" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:onClick="colorpick"
-        android:text="colorpick"
-        app:layout_constraintBaseline_toBaselineOf="@id/getWidAndHeight"
-        app:layout_constraintLeft_toRightOf="@id/getWidAndHeight" />
-
-    <Button
         android:id="@+id/tcp_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="tcpClient"
         android:text="tcp_client"
         app:layout_constraintTop_toBottomOf="@id/show_heAndWid" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="log utis "
+        android:onClick="logUtils"
+        app:layout_constraintBaseline_toBaselineOf="@id/tcp_client"
+        app:layout_constraintLeft_toRightOf="@id/tcp_client" />
 
 </android.support.constraint.ConstraintLayout>
