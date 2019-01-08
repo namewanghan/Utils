@@ -1,5 +1,6 @@
 package com.wh.utilsapp.activity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -59,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
     //网络请求工具
     public void httpUtils(View view) {
         Intent intent=new Intent(MainActivity.this,HttpUtilsActivity.class);
+        startActivity(intent);
+    }
+
+    //dialog 相关工具
+    public void dialogUtils(View view) {
+        Intent intent=new Intent(MainActivity.this,DialogUtilsActivity.class);
         startActivity(intent);
     }
 }

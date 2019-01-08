@@ -21,6 +21,7 @@
         <activity android:name=".activity.SocketActivity" />
         <activity android:name=".activity.LoginUtilsUserDemoActivity" />
         <activity android:name=".activity.HttpUtilsActivity" />
+        <activity android:name=".activity.DialogUtilsActivity" />
     </application>
 
 </manifest>
