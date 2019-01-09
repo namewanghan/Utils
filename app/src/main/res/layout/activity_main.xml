@@ -64,10 +64,29 @@
         app:layout_constraintTop_toBottomOf="@id/logUtils" />
 
     <Button
+        android:id="@+id/dialog_utils"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="dialog utils"
         android:onClick="dialogUtils"
         app:layout_constraintTop_toBottomOf="@id/httpUtils" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="device info  utils"
+        android:onClick="deviceUtils"
+        app:layout_constraintLeft_toRightOf="@id/dialog_utils"
+        app:layout_constraintTop_toBottomOf="@id/httpUtils" />
+
+    <TextView
+        android:id="@+id/device_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="device info :"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@id/dialog_utils" />
+
 
 </android.support.constraint.ConstraintLayout>
